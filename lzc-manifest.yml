@@ -52,10 +52,10 @@ services:
       - FOLIOSPACE_MEMORY_LIMIT_MB=768
     binds:
       - /lzcapp/var/config:/config
-      - "/lzcapp/documents/{{ .S.DeployUID }}/library:/library:ro"
-      - "/lzcapp/documents/{{ .S.DeployUID }}/books:/books:ro"
-      - "/lzcapp/documents/{{ .S.DeployUID }}/games:/games:ro"
-      - "/lzcapp/documents/{{ .S.DeployUID }}/videos:/videos:ro"
+      - "/lzcapp/documents/{{ .S.DeployUID }}/library:/library"
+      - "/lzcapp/documents/{{ .S.DeployUID }}/books:/books"
+      - "/lzcapp/documents/{{ .S.DeployUID }}/games:/games"
+      - "/lzcapp/documents/{{ .S.DeployUID }}/videos:/videos"
     healthcheck:
       test:
         - CMD
