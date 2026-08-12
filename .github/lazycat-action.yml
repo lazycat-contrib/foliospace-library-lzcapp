@@ -1,0 +1,46 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/foliospace-library.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: foliospace-library
+
+build:
+  toolchains: []
+  run_buildscript: false
+
+images:
+  - id: foliospace-library
+    target: service
+    service: foliospace-library
+    source: docker.io/funland/foliospace-library
+    channel: stable
+    sort: semver
+    tag_regex: '^[0-9]+\.[0-9]+$'
+    version_regex: '^(?P<version>[0-9]+\.[0-9]+)$'
+    version_template: '{version}.0'
+    delivery:
+      mode: mirror
+      require_digest_match: true
+
+stores:
+  official:
+    enabled: false
+    skip_if_version_exists: false
+    retry:
+      enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: FolioSpace Library
+    summary: "自托管的个人数字资产库，由 GitHub Actions 跟随上游镜像自动构建并发布。"
+

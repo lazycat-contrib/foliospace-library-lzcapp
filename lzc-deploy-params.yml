@@ -1,0 +1,18 @@
+params:
+  - id: api_token
+    type: secret
+    name: Access Token
+    description: "Access token used to protect this FolioSpace Library instance."
+    default_value: "$random(len=24)"
+    optional: false
+
+locales:
+  zh:
+    api_token:
+      name: 访问令牌
+      description: "用于保护当前 FolioSpace Library 实例的访问令牌。"
+  en:
+    api_token:
+      name: Access Token
+      description: "Access token used to protect this FolioSpace Library instance."
+

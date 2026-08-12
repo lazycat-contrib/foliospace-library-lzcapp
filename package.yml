@@ -1,0 +1,24 @@
+package: community.lazycat.app.foliospace-library
+version: 0.994.0
+name: FolioSpace Library
+description: "A self-hosted personal digital asset library for organizing books, comics, PDFs, games, videos, and documents into one private index."
+author: funland
+license: AGPL-3.0-only
+homepage: https://foliospace.app/zh
+min_os_version: 1.5.0
+
+permissions:
+  required:
+    - net.internet
+    - document.private
+
+locales:
+  zh:
+    name: FolioSpace Library
+    description: "自托管的个人数字资产库，将电子书、漫画、PDF、ROM、视频和文档整理为统一的私有索引，并通过网页、HTTP API、MCP 与 Apple 客户端安全访问；内容始终保存在用户自己的存储中。"
+  zh_CN:
+    name: FolioSpace Library
+    description: "自托管的个人数字资产库，将电子书、漫画、PDF、ROM、视频和文档整理为统一的私有索引，并通过网页、HTTP API、MCP 与 Apple 客户端安全访问；内容始终保存在用户自己的存储中。"
+  en:
+    name: FolioSpace Library
+    description: "A self-hosted personal digital asset library that organizes books, comics, PDFs, ROMs, videos, and documents into one private index for access through the web, HTTP API, MCP, and Apple clients while keeping content on your own storage."
