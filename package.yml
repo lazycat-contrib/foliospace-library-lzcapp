@@ -1,17 +1,15 @@
 package: community.lazycat.app.foliospace-library
-version: 0.994.0
+version: 0.995.0
 name: FolioSpace Library
 description: "A self-hosted personal digital asset library for organizing books, comics, PDFs, games, videos, and documents into one private index."
 author: funland
 license: AGPL-3.0-only
 homepage: https://foliospace.app/zh
 min_os_version: 1.5.0
-
 permissions:
   required:
     - net.internet
     - document.private
-
 locales:
   zh:
     name: FolioSpace Library

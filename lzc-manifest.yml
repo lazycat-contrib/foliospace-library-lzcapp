@@ -37,11 +37,10 @@ application:
         - /*
       do:
         - src: file:///lzcapp/pkg/content/lazycat-injects/lzc-file-chooser-inject.js
-
 services:
   foliospace-library:
-    # upstream: docker.io/funland/foliospace-library:0.994
-    image: docker.1ms.run/funland/foliospace-library:0.994
+    # upstream: docker.io/funland/foliospace-library:0.995
+    image: docker.1ms.run/funland/foliospace-library:0.995
     environment:
       - FOLIOSPACE_CONFIG_DIR=/config
       - FOLIOSPACE_LIBRARY_DIR=/library
@@ -69,9 +68,7 @@ services:
       retries: 5
       start_period: 30s
     mem_limit: 1536m
-
 usage: |
   每位懒猫用户会获得独立的 FolioSpace 实例、配置数据库和访问令牌，无需选择用户 UID。
   首次打开时，从 /library、/books、/games 或 /videos 中选择一个目录完成初始化；这些只读媒体目录位于当前用户的应用文稿中，卸载应用时默认保留。
   本应用仅索引和访问用户自行提供的内容，不包含或分发任何电子书、漫画、游戏或视频资源。
-
