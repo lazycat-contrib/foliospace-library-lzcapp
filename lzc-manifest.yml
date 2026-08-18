@@ -39,8 +39,8 @@ application:
         - src: file:///lzcapp/pkg/content/lazycat-injects/lzc-file-chooser-inject.js
 services:
   foliospace-library:
-    # upstream: docker.io/funland/foliospace-library:0.995
-    image: docker.1ms.run/funland/foliospace-library:0.995
+    # upstream: docker.io/funland/foliospace-library:0.997
+    image: docker.1ms.run/funland/foliospace-library:0.997
     environment:
       - FOLIOSPACE_CONFIG_DIR=/config
       - FOLIOSPACE_LIBRARY_DIR=/library
